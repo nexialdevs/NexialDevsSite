@@ -10,6 +10,12 @@
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+html, body {
+    overflow-x: hidden; /* Corta qualquer coisa que tentar vazar pros lados */
+    width: 100%;
+    position: relative;
+}
+
 /* Reset Padrão */
 * {
     margin: 0;
@@ -44,7 +50,11 @@ body {
 }
 
 /* Estilo da Logo em texto */
-.navbar .logo {
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-main);
@@ -67,6 +77,7 @@ body {
 
 .fale-conosco {
     height: 35px;
+    text-wrap: nowrap;
 }
 
 /* Efeito ao passar o mouse nos links */
@@ -110,7 +121,7 @@ body {
 /* Grid para alinhar os cartões lado a lado no PC */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
 }
 
@@ -184,7 +195,7 @@ body {
     position: relative;
     width: 100%;
     border-radius: 8px;
-    overflow: hidden;
+    overflow:hidden;
     margin-bottom: 16px;
     background: rgba(0, 0, 0, 0.2); /* Fundo escuro caso a imagem não preencha tudo */
 }
@@ -336,6 +347,10 @@ h1, h2, h3 {
     color: #022C22; /* Tom bem escuro de verde para contraste no botão */
 }
 
+.btn-projeto {
+    width: 180px;
+}
+
 .btn-primary:hover {
     background-color: var(--brand-green-hover);
     transform: translateY(-2px); /* Efeito sutil de levantar ao passar o mouse */
@@ -344,6 +359,7 @@ h1, h2, h3 {
 .btn-outline {
     border: 1px solid var(--text-muted);
     color: var(--text-main);
+    width: 180px;
 }
 
 .btn-outline:hover {
@@ -376,31 +392,64 @@ h1, h2, h3 {
 .hero-actions {
     display: flex;
     gap: 16px;
-    flex-wrap: wrap; /* Quebra a linha no celular se precisar */
+    flex-wrap: nowrap; /* Quebra a linha no celular se precisar */
 }
 
-@media (max-width: 720px) {
+@media (min-width: 320px) and (max-width: 640px) {
+    .container {
+        padding: 0 10px;
+    }
+
     .navbar {
-        padding: 8px 10px;
-    }
-
-    .navbar nav a:not(.btn) {
-        font-size: 0.8rem;
-    }
-
-    .navbar .logo {
+        padding: 6px 5px;
+        margin: 14px auto;
+        width: 98%;
         font-size: 1rem;
     }
 
-    .fale-conosco {
+    .navbar nav a:not(.btn) {
+        font-size: 0.75rem;
+    }
+
+    .logo {
         font-size: 0.8rem;
     }
 
-    .navbar nav {
-        gap: 24px;
+    .btn-projeto {
+        padding: 10px;
+        width: 130px;
     }
 
-    #logo-menu{
-        width: 25px;
+    .btn-outline {
+        padding: 10px;
+        width: 130px;
+    }
+
+    .fale-conosco {
+        font-size: 0.75rem;
+        padding: 4px;
+        height: 25px;
+    }
+
+    .navbar nav {
+        gap: 6px;
+    }
+
+    #logo-menu {
+        width: 20px;
+        margin-right: 5px;
+        align-self: center;
+    }
+
+    .hero-actions {
+        gap: 8px;
+    }
+
+    .hero {
+        padding-top: 10px;
+    }
+
+    .portfolio-card {
+        padding: 10px;
     }
 }
