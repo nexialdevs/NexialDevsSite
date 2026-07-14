@@ -378,3 +378,29 @@ h1, h2, h3 {
     gap: 16px;
     flex-wrap: wrap; /* Quebra a linha no celular se precisar */
 }
+
+@media (max-width: 520px) {
+    .navbar {
+        padding: 8px 10px;
+    }
+
+    .navbar nav a:not(.btn) {
+        font-size: 0.8rem;
+    }
+
+    .navbar .logo {
+        font-size: 1rem;
+    }
+
+    .fale-conosco {
+        font-size: 0.8rem;
+    }
+
+    .navbar nav {
+        gap: 24px;
+    }
+
+    #logo-menu{
+        width: 25px;
+    }
+}
