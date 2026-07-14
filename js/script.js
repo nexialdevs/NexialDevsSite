@@ -22,3 +22,29 @@ function moverCarrossel(trackId, direcao) {
         behavior: 'smooth'
     });
 }
+
+// Função para abrir ou fechar o modo Tela Cheia
+function alternarTelaCheia(containerId) {
+    const container = document.getElementById(containerId);
+    
+    // Verifica se já existe algum elemento em tela cheia no navegador
+    if (!document.fullscreenElement) {
+        // Se NÃO estiver em tela cheia, pede para entrar
+        if (container.requestFullscreen) {
+            container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) { /* Suporte para Safari */
+            container.webkitRequestFullscreen();
+        } else if (container.msRequestFullscreen) { /* Suporte para IE/Edge antigo */
+            container.msRequestFullscreen();
+        }
+    } else {
+        // Se JÁ estiver em tela cheia, pede para sair
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
