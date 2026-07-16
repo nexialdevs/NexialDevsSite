@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch('components/footer.html')
         .then(resposta => resposta.text())
         .then(codigoHtml => {
-            document.getElementById('footer-placeholder').innerHTML = codigoHtml;
+            document.getElementById('rodapé').innerHTML = codigoHtml;
         })
         .catch(erro => console.error("Erro ao carregar o footer:", erro));
 
