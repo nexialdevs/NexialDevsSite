@@ -453,7 +453,7 @@ h1, h2, h3 {
 }
 
 .service-card {
-    background-color: rgba(255, 255, 255, 0.025); 
+    background-color: rgba(0, 0, 0, 0.397); 
     border: 1px solid rgba(255, 255, 255, 0.05); 
     border-radius: 12px;
     padding: 40px 32px;
@@ -698,14 +698,6 @@ h1, h2, h3 {
 }
 
 @media (max-width: 640px) {
-    .container {
-        padding: 0 10px;
-    }
-
-    .team-section {
-        padding-top: 0px;
-    }
-
     .navbar {
         padding: 6px 5px;
         margin: 14px auto;
@@ -768,7 +760,7 @@ h1, h2, h3 {
     }
 
     .portfolio-card p {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .footer-grid {
