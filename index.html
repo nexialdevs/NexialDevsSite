@@ -17,7 +17,6 @@
         <div class="blob blob-2"></div>
     </div>
 
-    <!-- O menu injetado via JavaScript -->
     <div id="header-container"></div>
 
     <main>
@@ -28,12 +27,50 @@
                 
                 <div class="hero-actions">
                     <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
-                    <a href="#contato" class="btn btn-primary btn-projeto">Iniciar Projeto</a>
+                    <a href="#footer-placeholder" class="btn btn-primary btn-projeto">Iniciar Projeto</a>
+                </div>
+            </div>
+        </section>
+        <section id="servicos" class="services-section container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Soluções que <span class="text-highlight">escalam</span> a sua operação</h2>
+                <p class="section-subtitle">Da eliminação de gargalos manuais à construção de plataformas robustas.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Desenvolvimento Sob Medida</h3>
+                    <div class="service-content">
+                        <p class="problem-text"><strong>O Problema:</strong> Sistemas genéricos de prateleira não acompanham a complexidade e as regras únicas da sua operação corporativa.</p>
+                        <p class="solution-text"><strong>A Solução:</strong> Construímos sistemas web e aplicativos robustos do zero, desenhados especificamente para o seu modelo de negócio e integrados ao seu fluxo de trabalho.</p>
+                    </div>
+                    <a href="#footer-placeholder" class="btn-service">Falar com um consultor &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Automação de Processos</h3>
+                    <div class="service-content">
+                        <p class="problem-text"><strong>O Problema:</strong> A sua equipe perde horas preciosas com tarefas repetitivas, cruzamento manual de dados e processos sujeitos a falhas humanas.</p>
+                        <p class="solution-text"><strong>A Solução:</strong> Substituímos o trabalho braçal por scripts inteligentes usando Python, tratamento de dados em massa com Pandas e construção de aplicativos de uso interno nativos via AppSheet com Google Sheets.</p>
+                    </div>
+                    <a href="#footer-placeholder" class="btn-service">Automatizar minha rotina &rarr;</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Presença Digital Premium</h3>
+                    <div class="service-content">
+                        <p class="problem-text"><strong>O Problema:</strong> O seu site atual funciona como um panfleto estático, não reflete o valor real da sua marca e não gera oportunidades de negócio B2B.</p>
+                        <p class="solution-text"><strong>A Solução:</strong> Landing pages e plataformas corporativas de alta conversão. Focamos em design premium (UX/UI), velocidade extrema de carregamento e infraestrutura segura.</p>
+                    </div>
+                    <a href="#footer-placeholder" class="btn-service">Elevar minha marca &rarr;</a>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio" class="portfolio-section">
+        <section id="portfolio" class="portfolio-section sections">
             <div class="container">
                 <div class="section-header">
                     <h2>Projetos <span class="text-highlight">Entregues</span></h2>
@@ -41,7 +78,6 @@
                 </div>
 
                 <div class="portfolio-grid">
-                    <!-- Card do App de Requisição -->
                     <div class="portfolio-card liquid-glass">
                         <div class="card-tag">App Mobile & Web</div>
                         <div class="carousel-container" id="container-app-req">
@@ -54,7 +90,6 @@
                                 <img src="assets/img/portifolio/appreq/img5.png" alt="" class="carousel-slide">
                             </div>
                             
-                            <!-- Botões de navegação -->
                             <button class="carousel-btn prev" onclick="moverCarrossel('track-app-req', -1)">&#10094;</button>
                             <button class="carousel-btn next" onclick="moverCarrossel('track-app-req', 1)">&#10095;</button>
                         </div>
@@ -71,7 +106,6 @@
                         </div>
                     </div>
 
-                    <!-- Futuros projetos -->
                     <!--
                     <div class="portfolio-card liquid-glass">
                     </div>
@@ -79,7 +113,37 @@
                 </div>
             </div>
         </section>
+        <section id="equipe" class="team-section sections">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossa <span class="text-highlight">Equipe</span></h2>
+                    <p>Engenharia e estratégia guiadas por especialistas focados no seu resultado.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card liquid-glass">
+                        <img src="assets/img/Equipe/Kaua.jpeg" alt="Foto de Kauã Neves Caldeira" class="team-photo">
+                        <h3>Kauã Neves Caldeira</h3>
+                        <p class="team-role">Analista de Sistemas</p>
+                        <p class="team-bio">
+                            Proeficiente em arquitetura de dados e desenvolvimento de sistemas lógicos de alta performance.
+                        </p>
+                    </div>
+
+                    <div class="team-card liquid-glass">
+                        <img src="assets/img/Equipe/Mateus.jpeg" alt="Foto de Mateus Ribeiro Neves Martins" class="team-photo">
+                        <h3>Mateus Ribeiro Neves Martins</h3>
+                        <p class="team-role">Especialista em Desenvolvimento</p>
+                        <p class="team-bio">
+                            Proeficiente em linguagens de programação e arquitetura de código. Concretiza as soluções propostas em sistemas rápidos e confiáveis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    
+    <div id="footer-placeholder"></div>
 
     <script src="js/script.js"></script>
 </body>
